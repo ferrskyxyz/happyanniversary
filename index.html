@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Bulan Bersama - Anniversary Special</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ====== VARIABEL CSS ====== */
+        :root {
+            /* Tema Default Hitam */
+            --primary-color: #ff4757;
+            --secondary-color: #2f3542;
+            --bg-color: #1e1e1e;
+            --text-color: #f5f6fa;
+            --card-color: #2d3436;
+            --accent-color: #ff6b81;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            --gold-color: #fdcb6e;
+        }
+
+        /* ====== TEMPLATE TEMA ====== */
+        body.theme-black {
+            --primary-color: #ff4757;
+            --secondary-color: #2f3542;
+            --bg-color: #1e1e1e;
+            --text-color: #f5f6fa;
+            --card-color: #2d3436;
+            --accent-color: #ff6b81;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            --gold-color: #fdcb6e;
+        }
+
+        body.theme-pink {
+            --primary-color: #ff6b8b;
+            --secondary-color: #ffccd5;
+            --bg-color: #fff0f5;
+            --text-color: #333;
+            --card-color: #ffffff;
+            --accent-color: #ff4d6d;
+            --shadow: 0 10px 30px rgba(255, 107, 139, 0.2);
+            --gold-color: #ffd700;
+        }
+
+        body.theme-blue {
+            --primary-color: #4d8af0;
+            --secondary-color: #a8d8ff;
+            --bg-color: #f0f8ff;
+            --text-color: #2c3e50;
+            --card-color: #ffffff;
+            --accent-color: #2d7af0;
+            --shadow: 0 10px 30px rgba(77, 138, 240, 0.2);
+            --gold-color: #ffd700;
+        }
+
+        body.theme-purple {
+            --primary-color: #9c88ff;
+            --secondary-color: #e0c3fc;
+            --bg-color: #f5f0ff;
+            --text-color: #2c2c54;
+            --card-color: #ffffff;
+            --accent-color: #8c7ae6;
+            --shadow: 0 10px 30px rgba(156, 136, 255, 0.2);
+            --gold-color: #ffd700;
+        }
+
+        body.theme-green {
+            --primary-color: #4cd137;
+            --secondary-color: #c8e6c9;
+            --bg-color: #f1f8e9;
+            --text-color: #2e7d32;
+            --card-color: #ffffff;
+            --accent-color: #44bd32;
+            --shadow: 0 10px 30px rgba(76, 209, 55, 0.2);
+            --gold-color: #ffd700;
+        }
+
+        body.theme-gold {
+            --primary-color: #ff9f1a;
+            --secondary-color: #ffeaa7;
+            --bg-color: #fff9e6;
+            --text-color: #5c4b00;
+            --card-color: #ffffff;
+            --accent-color: #ff9f43;
+            --shadow: 0 10px 30px rgba(255, 159, 26, 0.2);
+            --gold-color: #ffd700;
+        }
+
+        body.theme-dark {
+            --primary-color: #ff6b6b;
+            --secondary-color: #2d3436;
+            --bg-color: #121212;
+            --text-color: #dfe6e9;
+            --card-color: #1e1e1e;
+            --accent-color: #ff7675;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            --gold-color: #fdcb6e;
+        }
+
+        body.theme-ocean {
+            --primary-color: #00a8ff;
+            --secondary-color: #9c88ff;
+            --bg-color: #0a3d62;
+            --text-color: #ffffff;
+            --card-color: #1e3799;
+            --accent-color: #4cd137;
+            --shadow: 0 10px 30px rgba(0, 168, 255, 0.3);
+            --gold-color: #fdcb6e;
+        }
+
+        body.theme-sunset {
+            --primary-color: #ff9f43;
+            --secondary-color: #ffcccc;
+            --bg-color: #fff5e6;
+            --text-color: #cc6600;
+            --card-color: #ffffff;
+            --accent-color: #ff6b6b;
+            --shadow: 0 10px 30px rgba(255, 159, 67, 0.2);
+            --gold-color: #ffd700;
+        }
+
+        body.theme-lavender {
+            --primary-color: #a29bfe;
+            --secondary-color: #d4b5ff;
+            --bg-color: #f9f7ff;
+            --text-color: #5d4a8a;
+            --card-color: #ffffff;
+            --accent-color: #8a7dff;
+            --shadow: 0 10px 30px rgba(162, 155, 254, 0.2);
+            --gold-color: #ffd700;
+        }
+
+        body.theme-coral {
+            --primary-color: #ff7675;
+            --secondary-color: #fab1a0;
+            --bg-color: #fff0ee;
+            --text-color: #b33939;
+            --card-color: #ffffff;
+            --accent-color: #ff5252;
+            --shadow: 0 10px 30px rgba(255, 118, 117, 0.2);
+            --gold-color: #ffd700;
+        }
+
+        /* ====== RESET & BASE STYLES ====== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.5s ease, color 0.3s ease, transform 0.3s ease;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 107, 139, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(77, 138, 240, 0.1) 0%, transparent 20%);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* ====== LANGUAGE SWITCHER ====== */
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        .lang-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lang-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .lang-options {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            background-color: var(--card-color);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 15px;
+            display: none;
+            flex-direction: column;
+            width: 150px;
+            z-index: 1000;
+        }
+
+        .lang-option {
+            padding: 12px 15px;
+            margin: 5px 0;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .lang-option:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .lang-option.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .lang-flag {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* ====== THEME SWITCHER ====== */
+        .theme-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .theme-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.1) rotate(15deg);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .theme-options {
+            position: absolute;
+            top: 70px;
+            right: 0;
+            background-color: var(--card-color);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 15px;
+            display: none;
+            flex-direction: column;
+            width: 200px;
+            z-index: 1000;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .theme-options::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .theme-options::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 10px;
+        }
+
+        .theme-option {
+            padding: 12px 15px;
+            margin: 5px 0;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s;
+            font-weight: 500;
+            border: 2px solid transparent;
+        }
+
+        .theme-option:hover {
+            background-color: var(--secondary-color);
+            transform: translateX(-5px);
+        }
+
+        .theme-option.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        .theme-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* ====== HEADER ====== */
+        header {
+            text-align: center;
+            padding: 80px 20px 40px;
+            position: relative;
+        }
+
+        .anniversary-title {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 4rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+            padding: 0 20px;
+        }
+
+        .subtitle::before, .subtitle::after {
+            content: '♥';
+            color: var(--primary-color);
+            margin: 0 15px;
+        }
+
+        .date {
+            font-size: 1.3rem;
+            color: var(--text-color);
+            margin-bottom: 30px;
+            font-weight: 600;
+            display: inline-block;
+            padding: 15px 35px;
+            background: var(--card-color);
+            border-radius: 50px;
+            box-shadow: var(--shadow);
+            border: 2px solid var(--primary-color);
+        }
+
+        /* ====== DASHBOARD SECTION ====== */
+        .dashboard-section {
+            background-color: var(--card-color);
+            border-radius: 30px;
+            padding: 50px;
+            margin: 50px 0;
+            box-shadow: var(--shadow);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .dashboard-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+            justify-content: center;
+        }
+
+        /* FOTO BULAT - Dashboard */
+        .dashboard-photo {
+            flex: 0 0 400px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dashboard-frame {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 15px solid var(--primary-color);
+            box-shadow: 
+                0 0 40px rgba(255, 107, 139, 0.3),
+                inset 0 0 40px rgba(0, 0, 0, 0.2);
+            position: relative;
+            background: var(--secondary-color);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .dashboard-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s;
+            filter: brightness(1.05) contrast(1.1);
+        }
+
+        .dashboard-frame:hover .dashboard-img {
+            transform: scale(1.1);
+        }
+
+        /* Efek lingkaran di sekitar foto */
+        .dashboard-frame::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            border-radius: 50%;
+            border: 3px dashed var(--accent-color);
+            animation: spin 20s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .dashboard-text {
+            flex: 1;
+            min-width: 300px;
+            text-align: left;
+            padding: 20px 40px;
+        }
+
+        .dashboard-title {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 25px;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .dashboard-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        .dashboard-message {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: var(--text-color);
+            position: relative;
+            padding-left: 20px;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .dashboard-quote {
+            font-style: italic;
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            border-left: 5px solid var(--primary-color);
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .dashboard-quote::before {
+            content: '❝';
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            font-size: 4rem;
+            color: var(--primary-color);
+            opacity: 0.3;
+        }
+
+        /* ====== ROMANTIC MESSAGES ====== */
+        .romantic-section {
+            background-color: var(--card-color);
+            border-radius: 30px;
+            padding: 60px;
+            margin: 70px 0;
+            box-shadow: var(--shadow);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 50px;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        .message-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+
+        .love-message {
+            font-size: 1.15rem;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            text-align: left;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .love-message::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        }
+
+        .love-message:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .love-message i {
+            color: var(--primary-color);
+            margin-right: 15px;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .love-message:hover i {
+            transform: scale(1.3);
+        }
+
+        /* ====== PHOTO VIEWER ====== */
+        .photo-viewer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            padding: 20px;
+        }
+
+        .photo-viewer-overlay.active {
+            display: flex;
+        }
+
+        .photo-viewer-container {
+            width: 100%;
+            max-width: 1200px;
+            height: 90vh;
+            background-color: var(--card-color);
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .viewer-header {
+            padding: 20px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .viewer-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .close-viewer {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+
+        .close-viewer:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .viewer-content {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+            padding: 30px;
+            gap: 30px;
+        }
+
+        .viewer-photo {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .viewer-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .viewer-message {
+            flex: 1;
+            min-width: 300px;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .viewer-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: var(--text-color);
+        }
+
+        .viewer-quote {
+            font-style: italic;
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            padding: 20px;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* ====== GALLERY SECTION ====== */
+        .gallery-section {
+            margin: 80px 0;
+        }
+
+        .gallery-title {
+            font-size: 2.8rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 50px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Frame Styles untuk foto-foto kecil */
+        .gallery-item {
+            border-radius: 20px;
+            overflow: hidden;
+            height: 320px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.4s;
+            background: var(--card-color);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .frame-content {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.1);
+        }
+
+        .photo-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: white;
+            padding: 25px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+            font-weight: 600;
+            font-size: 1.3rem;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .gallery-item:hover .photo-overlay {
+            transform: translateY(0);
+        }
+
+        /* Frame borders yang lebih variatif */
+        .frame-1 { border: 12px solid var(--primary-color); }
+        .frame-2 { border: 8px double var(--accent-color); }
+        .frame-3 { border: 15px solid var(--secondary-color); border-radius: 30px 0 30px 0; }
+        .frame-4 { border: 10px solid var(--gold-color); }
+        .frame-5 { border: 8px solid var(--primary-color); border-radius: 0 30px 0 30px; }
+        .frame-6 { border: 12px solid var(--accent-color); box-shadow: inset 0 0 0 5px var(--primary-color); }
+        .frame-7 { border: 8px double var(--gold-color); }
+        .frame-8 { border: 15px solid var(--primary-color); border-radius: 40px 0 40px 0; }
+        .frame-9 { border: 10px solid var(--accent-color); box-shadow: 0 0 0 5px var(--secondary-color); }
+        .frame-10 { border: 12px solid var(--gold-color); border-radius: 0 40px 0 40px; }
+
+        /* ====== FOOTER ====== */
+        footer {
+            text-align: center;
+            padding: 80px 20px 120px;
+            margin-top: 80px;
+            background-color: var(--card-color);
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Efek latar belakang footer */
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        }
+
+        .thank-you {
+            font-size: 2.8rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .thank-message {
+            font-size: 1.15rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .thank-message:last-of-type {
+            margin-bottom: 60px;
+        }
+
+        /* SIGNATURE KECIL DI POJOK KIRI BAWAH */
+        .footer-signature {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            text-align: left;
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-signature:hover {
+            opacity: 1;
+        }
+
+        .footer-signature .name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+        }
+
+        /* ====== ANIMATIONS ====== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s, transform 0.8s;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .heartbeat {
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* ====== RESPONSIVE DESIGN ====== */
+        @media (max-width: 1200px) {
+            .dashboard-frame {
+                width: 350px;
+                height: 350px;
+            }
+            
+            .message-container {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            }
+            
+            .viewer-content {
+                flex-direction: column;
+            }
+            
+            .viewer-photo, .viewer-message {
+                min-width: 100%;
+            }
+            
+            .viewer-photo {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .anniversary-title {
+                font-size: 3.2rem;
+            }
+            
+            .dashboard-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .dashboard-text {
+                text-align: center;
+            }
+            
+            .dashboard-title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .dashboard-frame {
+                width: 300px;
+                height: 300px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .anniversary-title {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.6rem;
+            }
+            
+            .dashboard-section, .romantic-section {
+                padding: 30px;
+            }
+            
+            .dashboard-frame {
+                width: 250px;
+                height: 250px;
+                border-width: 10px;
+            }
+            
+            .section-title, .gallery-title {
+                font-size: 2.2rem;
+            }
+            
+            .message-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+                gap: 20px;
+            }
+            
+            .theme-btn, .lang-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+            
+            .thank-you {
+                font-size: 2.2rem;
+            }
+            
+            .footer-signature {
+                bottom: 20px;
+                left: 20px;
+                font-size: 0.8rem;
+            }
+            
+            .footer-signature .name {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .anniversary-title {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .dashboard-frame {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                max-width: 350px;
+                margin: 0 auto;
+            }
+            
+            .theme-options, .lang-options {
+                width: 180px;
+            }
+            
+            .thank-you {
+                font-size: 1.8rem;
+            }
+            
+            .footer-signature {
+                bottom: 15px;
+                left: 15px;
+                font-size: 0.7rem;
+            }
+            
+            .footer-signature .name {
+                font-size: 0.9rem;
+            }
+            
+            footer {
+                padding: 60px 20px 100px;
+            }
+            
+            /* Atur posisi tombol agar tidak bertumpuk di mobile */
+            .language-switcher {
+                top: 20px;
+                left: 20px;
+            }
+            
+            .theme-switcher {
+                top: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            /* Untuk device sangat kecil */
+            .language-switcher {
+                top: 15px;
+                left: 15px;
+            }
+            
+            .theme-switcher {
+                top: 15px;
+                right: 15px;
+            }
+            
+            .lang-btn, .theme-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body class="theme-black">
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="lang-btn heartbeat" id="langToggle">
+            <i class="fas fa-globe"></i>
+        </button>
+        <div class="lang-options" id="langOptions">
+            <div class="lang-option active" data-lang="id">
+                <img src="https://flagcdn.com/w20/id.png" alt="Indonesia" class="lang-flag">
+                <span>Indonesia</span>
+            </div>
+            <div class="lang-option" data-lang="en">
+                <img src="https://flagcdn.com/w20/gb.png" alt="English" class="lang-flag">
+                <span>English</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button class="theme-btn heartbeat" id="themeToggle">
+            <i class="fas fa-palette"></i>
+        </button>
+        <div class="theme-options" id="themeOptions">
+            <div class="theme-option active" data-theme="black">
+                <span>Black Elegant</span>
+                <span class="theme-color" style="background-color: #ff4757;"></span>
+            </div>
+            <div class="theme-option" data-theme="pink">
+                <span>Pink Romantic</span>
+                <span class="theme-color" style="background-color: #ff6b8b;"></span>
+            </div>
+            <div class="theme-option" data-theme="blue">
+                <span>Blue Calm</span>
+                <span class="theme-color" style="background-color: #4d8af0;"></span>
+            </div>
+            <div class="theme-option" data-theme="purple">
+                <span>Purple Mystic</span>
+                <span class="theme-color" style="background-color: #9c88ff;"></span>
+            </div>
+            <div class="theme-option" data-theme="green">
+                <span>Green Fresh</span>
+                <span class="theme-color" style="background-color: #4cd137;"></span>
+            </div>
+            <div class="theme-option" data-theme="gold">
+                <span>Gold Elegant</span>
+                <span class="theme-color" style="background-color: #ff9f1a;"></span>
+            </div>
+            <div class="theme-option" data-theme="dark">
+                <span>Dark Modern</span>
+                <span class="theme-color" style="background-color: #121212;"></span>
+            </div>
+            <div class="theme-option" data-theme="ocean">
+                <span>Ocean Blue</span>
+                <span class="theme-color" style="background-color: #00a8ff;"></span>
+            </div>
+            <div class="theme-option" data-theme="sunset">
+                <span>Sunset</span>
+                <span class="theme-color" style="background-color: #ff9f43;"></span>
+            </div>
+            <div class="theme-option" data-theme="lavender">
+                <span>Lavender</span>
+                <span class="theme-color" style="background-color: #a29bfe;"></span>
+            </div>
+            <div class="theme-option" data-theme="coral">
+                <span>Coral</span>
+                <span class="theme-color" style="background-color: #ff7675;"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Photo Viewer -->
+    <div class="photo-viewer-overlay" id="photoViewer">
+        <div class="photo-viewer-container">
+            <div class="viewer-header">
+                <h2 class="viewer-title" id="viewerTitle">Judul Foto</h2>
+                <button class="close-viewer" id="closeViewer">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="viewer-content">
+                <div class="viewer-photo">
+                    <img src="" alt="Selected Photo" class="viewer-img" id="viewerImg">
+                </div>
+                <div class="viewer-message">
+                    <div class="viewer-text" id="viewerText">
+                        Pesan anniversary akan muncul di sini
+                    </div>
+                    <div class="viewer-quote" id="viewerQuote">
+                        "Cinta sejati adalah ketika dua bulan terasa seperti dua detik, karena setiap momen bersamamu adalah keabadian."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="fade-in">
+            <h1 class="anniversary-title" id="mainTitle">2 Bulan Bersamamu</h1>
+            <p class="subtitle" id="mainSubtitle">Perjalanan Cinta Kita</p>
+            <p class="date" id="anniversaryDate">9 Februari 2026</p>
+            <p style="font-size: 1.1rem; max-width: 600px; margin: 30px auto; color: var(--accent-color);" id="mainDescription">
+                <i class="fas fa-heart" style="color: var(--primary-color); margin: 0 10px;"></i>
+                60 hari penuh tawa, cerita, dan kebahagiaan bersama yang takkan pernah terlupakan
+                <i class="fas fa-heart" style="color: var(--primary-color); margin: 0 10px;"></i>
+            </p>
+        </header>
+
+        <!-- Dashboard Section -->
+        <section class="dashboard-section fade-in">
+            <div class="dashboard-content">
+                <div class="dashboard-photo">
+                    <div class="dashboard-frame">
+                        <!-- Foto utama di folder media -->
+                        <img src="./media/thumb.jpg" alt="Foto Pacar" class="dashboard-img">
+                    </div>
+                </div>
+                <div class="dashboard-text">
+                    <h2 class="dashboard-title" id="dashboardTitle">Untuk Cintaku</h2>
+                    <p class="dashboard-message" id="dashboardMessage1">
+                        Dua bulan sudah kita lewati bersama. Waktu yang singkat namun penuh makna. 
+                        Setiap momen bersamamu adalah hadiah terindah dalam hidupku.
+                    </p>
+                    <p class="dashboard-message" id="dashboardMessage2">
+                        Kamu membuatku memahami arti cinta yang sebenarnya. Cinta yang sederhana, 
+                        namun mampu mengisi setiap ruang dalam hatiku dengan kebahagiaan.
+                    </p>
+                    <div class="dashboard-quote" id="dashboardQuote">
+                        "Dalam 60 hari ini, aku menemukan rumah di pelukanmu dan surga dalam senyumanmu."
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Romantic Messages -->
+        <section class="romantic-section fade-in">
+            <h2 class="section-title" id="romanticTitle">Pesan Cinta Untukmu</h2>
+            <div class="message-container">
+                <div class="love-message">
+                    <i class="fas fa-heart"></i>
+                    <span id="message1">Dua bulan bersamamu terasa seperti mimpi indah yang tak ingin kubangunkan. Setiap detik bersamamu adalah harta karun dalam hidupku.</span>
+                </div>
+                <div class="love-message">
+                    <i class="fas fa-star"></i>
+                    <span id="message2">Kamu adalah bintang paling terang di langit malamku, pelangi setelah badai, dan kehangatan di hari yang dingin.</span>
+                </div>
+                <div class="love-message">
+                    <i class="fas fa-gem"></i>
+                    <span id="message3">Terima kasih sudah menjadi pendengar setia, tempat berbagi cerita, dan sumber inspirasi dalam setiap langkahku.</span>
+                </div>
+                <div class="love-message">
+                    <i class="fas fa-feather-alt"></i>
+                    <span id="message4">Dalam 2 bulan ini, aku belajar bahwa cinta sejati itu seperti angin - tidak terlihat, tetapi bisa dirasakan kehadirannya.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery with 10 Photos -->
+        <section class="gallery-section fade-in">
+            <h2 class="gallery-title" id="galleryTitle">Foto Orang Cantik</h2>
+            <div class="gallery-grid" id="photoGallery">
+                <!-- Photo 1 -->
+                <div class="gallery-item frame-1" data-index="1">
+                    <div class="frame-content">
+                        <img src="./media/photo1.jpg" alt="Foto 1" class="gallery-img">
+                    </div>
+                    <div class="photo-overlay" id="photoTitle1">Hari Pertama Kita</div>
+                </div>
+                
+                <!-- Photo 2 -->
+                <div class="gallery-item frame-2" data-index="2">
+                    <div class="frame-content">
+                        <img src="./media/photo2.jpg" alt="Foto 2" class="gallery-img">
+                    </div>
+                    <div class="photo-overlay" id="photoTitle2">Tawa Tanpa Alasan</div>
+                </div>
+                
+                <!-- Photo 3 -->
+                <div class="gallery-item frame-3" data-index="3">
+                    <div class="frame-content">
+                        <img src="./media/photo3.jpg" alt="Foto 3" class="gallery-img">
+                    </div>
+                    <div class="photo-overlay" id="photoTitle3">Senja dan Kita</div>
+                </div>
+                
+                <!-- Photo 4 -->
+                <div class="gallery-item frame-4" data-index="4">
+                    <div class="frame-content">
+                        <img src="./media/photo4.jpg" alt="Foto 4" class="gallery-img">
+                    </div>
+                    <div class="photo-overlay" id="photoTitle4">Petualangan Kecil</div>
+                </div>
+                
+                <!-- Photo 5 -->
+                <div class="gallery-item frame-5" data-index="5">
+                    <div class="frame-content">
+                        <img src="./media/photo5.jpg" alt="Foto 5" class="gallery-img">
+                    </div>
+                    <div class="photo-overlay" id="photoTitle5">Senyumanmu</div>
+                </div>
+                
+                <!-- Photo 6 -->
+                <div class="gallery-item frame-6" data-index="6">
+                    <div class="frame-content">
+                        <img src="./media/photo6.jpg" alt="Foto 6" class="gallery-img">
+                    </div>
+                    <div class="photo-overlay" id="photoTitle6">Momen Hening</div>
+                </div>
+                
+                <!-- Photo 7 -->
+                <div class="gallery-item frame-7" data-index="7">
+                    <div class="frame-content">
+                        <img src="./media/photo7.jpg" alt="Foto 7" class="gallery-img">
+                    </div>
+                    <div class="photo-overlay" id="photoTitle7">Matahari dan Kita</div>
+                </div>
+                
+                <!-- Photo 8 -->
+                <div class="gallery-item frame-8" data-index="8">
+                    <div class="frame-content">
+                        <img src="./media/photo8.jpg" alt="Foto 8" class="gallery-img">
+                    </div>
+                    <div class="photo-overlay" id="photoTitle8">Bersemi Bersama</div>
+                </div>
+                
+                <!-- Photo 9 -->
+                <div class="gallery-item frame-9" data-index="9">
+                    <div class="frame-content">
+                        <img src="./media/photo9.jpg" alt="Foto 9" class="gallery-img">
+                    </div>
+                    <div class="photo-overlay" id="photoTitle9">Pelukan Hangat</div>
+                </div>
+                
+                <!-- Photo 10 -->
+                <div class="gallery-item frame-10" data-index="10">
+                    <div class="frame-content">
+                        <img src="./media/photo10.jpg" alt="Foto 10" class="gallery-img">
+                    </div>
+                    <div class="photo-overlay" id="photoTitle10">Kenangan Abadi</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="fade-in">
+            <h2 class="thank-you" id="footerTitle">Terima Kasih Atas Segalanya</h2>
+            <p class="thank-message" id="footerMessage1">
+                Terima kasih sudah menjadi bagian terindah dalam hidupku selama 2 bulan ini. Setiap tawa, setiap cerita, setiap momen bersamamu adalah harta yang tak ternilai harganya. Aku bersyukur memiliki seseorang seperti kamu yang membuat hidupku lebih berarti.
+            </p>
+            <p class="thank-message" id="footerMessage2">
+                Aku berharap kita bisa terus menjalani perjalanan ini bersama, menciptakan lebih banyak kenangan indah, dan tumbuh bersama sebagai pasangan yang saling mendukung dan mengasihi. 2 bulan pertama ini hanyalah bab pembuka dari cerita panjang kita.
+            </p>
+            
+            <!-- Signature Kecil di Pojok Kiri Bawah -->
+            <div class="footer-signature">
+                <div>Dari pacarmu yang ganteng,</div>
+                <div class="name">Ferdi</div>
+            </div>
+
+            <p style="margin-top: 40px; color: var(--accent-color);">
+                <small><i class="fas fa-heart"></i> <span id="footerDate">2 Bulan Anniversary • 9 Februari 2026</span> <i class="fas fa-heart"></i></small>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Data terjemahan untuk kedua bahasa
+        const translations = {
+            id: {
+                // Header
+                mainTitle: "2 Bulan Bersamamu",
+                mainSubtitle: "Perjalanan Cinta Kita",
+                mainDescription: "60 hari penuh tawa, cerita, dan kebahagiaan bersama yang takkan pernah terlupakan",
+                
+                // Dashboard
+                dashboardTitle: "Untuk Cintaku",
+                dashboardMessage1: "Dua bulan sudah kita lewati bersama. Waktu yang singkat namun penuh makna. Setiap momen bersamamu adalah hadiah terindah dalam hidupku.",
+                dashboardMessage2: "Kamu membuatku memahami arti cinta yang sebenarnya. Cinta yang sederhana, namun mampu mengisi setiap ruang dalam hatiku dengan kebahagiaan.",
+                dashboardQuote: "Dalam 60 hari ini, aku menemukan rumah di pelukanmu dan surga dalam senyumanmu.",
+                
+                // Romantic Messages
+                romanticTitle: "Pesan Cinta Untukmu",
+                message1: "Dua bulan bersamamu terasa seperti mimpi indah yang tak ingin kubangunkan. Setiap detik bersamamu adalah harta karun dalam hidupku.",
+                message2: "Kamu adalah bintang paling terang di langit malamku, pelangi setelah badai, dan kehangatan di hari yang dingin.",
+                message3: "Terima kasih sudah menjadi pendengar setia, tempat berbagi cerita, dan sumber inspirasi dalam setiap langkahku.",
+                message4: "Dalam 2 bulan ini, aku belajar bahwa cinta sejati itu seperti angin - tidak terlihat, tetapi bisa dirasakan kehadirannya.",
+                
+                // Gallery
+                galleryTitle: "Foto Orang Cantik",
+                photoTitle1: "Hari Pertama Kita",
+                photoTitle2: "Tawa Tanpa Alasan",
+                photoTitle3: "Senja dan Kita",
+                photoTitle4: "Petualangan Kecil",
+                photoTitle5: "Senyumanmu",
+                photoTitle6: "Momen Hening",
+                photoTitle7: "Matahari dan Kita",
+                photoTitle8: "Bersemi Bersama",
+                photoTitle9: "Pelukan Hangat",
+                photoTitle10: "Kenangan Abadi",
+                
+                // Footer
+                footerTitle: "Terima Kasih Atas Segalanya",
+                footerMessage1: "Terima kasih sudah menjadi bagian terindah dalam hidupku selama 2 bulan ini. Setiap tawa, setiap cerita, setiap momen bersamamu adalah harta yang tak ternilai harganya. Aku bersyukur memiliki seseorang seperti kamu yang membuat hidupku lebih berarti.",
+                footerMessage2: "Aku berharap kita bisa terus menjalani perjalanan ini bersama, menciptakan lebih banyak kenangan indah, dan tumbuh bersama sebagai pasangan yang saling mendukung dan mengasihi. 2 bulan pertama ini hanyalah bab pembuka dari cerita panjang kita.",
+                footerDate: "2 Bulan Anniversary • 9 Februari 2026",
+                
+                // Photo Viewer Data
+                photoData: [
+                    {
+                        title: "Pertemuan Pertama",
+                        text: "Hari pertama kita bertemu, saat senyumanmu membuat jantungku berdebar kencang. 2 bulan berlalu, dan debar itu masih sama kuatnya. Aku masih ingat bagaimana wajahmu bersinar saat kita pertama kali berbicara.",
+                        quote: "Senyumanmu adalah halaman pertama dari buku cerita indah kita."
+                    },
+                    {
+                        title: "Tawa Bersama",
+                        text: "Tertawa bersama tanpa alasan, itulah yang membuat 2 bulan ini terasa begitu ringan dan penuh kebahagiaan. Setiap tawamu adalah musik terindah untuk telingaku.",
+                        quote: "Tawa adalah bahasa cinta yang paling universal."
+                    },
+                    {
+                        title: "Senja Bersama",
+                        text: "Di bawah langit senja, aku menyadari bahwa 2 bulan bersamamu adalah waktu terindah dalam hidupku. Warna jingga langit tak sebanding dengan cahaya yang kau bawa ke hidupku setiap hari.",
+                        quote: "Bersamamu, setiap senja terasa seperti awal dari sesuatu yang abadi."
+                    },
+                    {
+                        title: "Petualangan Kecil",
+                        text: "Setiap petualangan kecil kita terasa seperti perjalanan besar, karena yang terpenting adalah bersama kamu. 2 bulan ini mengajarkanku bahwa tujuan tak penting.",
+                        quote: "Petualangan terbaik adalah yang kita lakukan bersama."
+                    },
+                    {
+                        title: "Senyumanmu",
+                        text: "Senyumanmu adalah obat terbaik untuk segala lelahku. 2 bulan ini mengajarkanku arti kebahagiaan sejati. Dalam 60 hari ini, senyumanmu telah menjadi vitamin harianku.",
+                        quote: "Senyumanmu adalah keajaiban kecil yang menyembuhkan hatiku setiap hari."
+                    },
+                    {
+                        title: "Momen Hening",
+                        text: "Dalam diam kita, ada ribuan kata tak terucap yang bermakna. 2 bulan bersama mengajarkanku bahasa cinta tanpa kata. Kadang, keheningan bersamamu lebih berarti.",
+                        quote: "Diam kita berdua adalah percakapan paling jujur yang pernah kumiliki."
+                    },
+                    {
+                        title: "Matahari dan Kita",
+                        text: "Matahari terbit dan terbenam, tapi cintaku padamu tetap sama setiap hari dalam 2 bulan ini. Seperti matahari yang selalu kembali, hatiku selalu kembali padamu.",
+                        quote: "Cintaku padamu lebih konsisten dari terbitnya matahari."
+                    },
+                    {
+                        title: "Bersemi Bersama",
+                        text: "Seperti bunga yang mekar, cinta kita tumbuh indah dalam 2 bulan ini. Semoga terus mekar selamanya. Dari kuncup kecil, kini kita mulai menunjukkan kelopak-kelopak indahnya.",
+                        quote: "Cinta kita seperti bunga yang baru mekar - masih segar, masih penuh harapan."
+                    },
+                    {
+                        title: "Pelukan Hangat",
+                        text: "Hujan datang dan pergi, tapi pelukanmu tetap menjadi tempat terbaik untuk berlindung. 2 bulan bersamamu adalah anugerah. Dalam pelukanmu, aku menemukan rumah.",
+                        quote: "Pelukanmu adalah kenyamanan terbaik setelah hari yang panjang."
+                    },
+                    {
+                        title: "Kenangan Abadi",
+                        text: "60 hari, 1440 jam, 86400 menit bersamamu. Setiap detiknya adalah halaman baru dalam buku cinta kita. 2 bulan pertama ini akan selalu jadi bab favoritku.",
+                        quote: "60 hari bersamamu adalah prolog dari cerita seumur hidup yang ingin kutulis bersamamu."
+                    }
+                ]
+            },
+            en: {
+                // Header
+                mainTitle: "2 Months With You",
+                mainSubtitle: "Our Love Journey",
+                mainDescription: "60 days full of laughter, stories, and unforgettable happiness together",
+                
+                // Dashboard
+                dashboardTitle: "For My Love",
+                dashboardMessage1: "Two months have passed together. Short yet meaningful time. Every moment with you is the most beautiful gift in my life.",
+                dashboardMessage2: "You make me understand the true meaning of love. Simple love, yet able to fill every space in my heart with happiness.",
+                dashboardQuote: "In these 60 days, I found home in your embrace and heaven in your smile.",
+                
+                // Romantic Messages
+                romanticTitle: "Love Messages for You",
+                message1: "Two months with you feels like a beautiful dream I don't want to wake up from. Every second with you is a treasure in my life.",
+                message2: "You are the brightest star in my night sky, the rainbow after the storm, and the warmth on a cold day.",
+                message3: "Thank you for being a loyal listener, a place to share stories, and a source of inspiration in every step I take.",
+                message4: "In these 2 months, I learned that true love is like the wind - invisible, but you can feel its presence.",
+                
+                // Gallery
+                galleryTitle: "Photo Of A Beautiful Person",
+                photoTitle1: "Our First Day",
+                photoTitle2: "Laughter Without Reason",
+                photoTitle3: "Sunset and Us",
+                photoTitle4: "Little Adventure",
+                photoTitle5: "Your Smile",
+                photoTitle6: "Quiet Moment",
+                photoTitle7: "Sun and Us",
+                photoTitle8: "Blooming Together",
+                photoTitle9: "Warm Hug",
+                photoTitle10: "Eternal Memory",
+                
+                // Footer
+                footerTitle: "Thank You for Everything",
+                footerMessage1: "Thank you for being the most beautiful part of my life for 2 months. Every laugh, every story, every moment with you is an invaluable treasure. I'm grateful to have someone like you who makes my life more meaningful.",
+                footerMessage2: "I hope we can continue this journey together, creating more beautiful memories, and growing together as a couple who support and love each other. These first 2 months are just the opening chapter of our long story.",
+                footerDate: "2 Months Anniversary • February 9, 2026",
+                
+                // Photo Viewer Data
+                photoData: [
+                    {
+                        title: "First Meeting",
+                        text: "The first day we met, when your smile made my heart beat fast. 2 months have passed, and that heartbeat is still just as strong. I still remember how your face shone when we first spoke.",
+                        quote: "Your smile is the first page of our beautiful story book."
+                    },
+                    {
+                        title: "Laughter Together",
+                        text: "Laughing together for no reason, that's what made these 2 months feel so light and full of happiness. Every laugh of yours is the most beautiful music to my ears.",
+                        quote: "Laughter is the most universal language of love."
+                    },
+                    {
+                        title: "Sunset Together",
+                        text: "Under the sunset sky, I realized that 2 months with you is the most beautiful time in my life. The orange color of the sky is no match for the light you bring to my life every day.",
+                        quote: "With you, every sunset feels like the beginning of something eternal."
+                    },
+                    {
+                        title: "Little Adventure",
+                        text: "Every little adventure of ours feels like a big journey, because the most important thing is being with you. These 2 months taught me that the destination doesn't matter.",
+                        quote: "The best adventures are the ones we do together."
+                    },
+                    {
+                        title: "Your Smile",
+                        text: "Your smile is the best medicine for all my tiredness. These 2 months taught me the true meaning of happiness. In these 60 days, your smile has become my daily vitamin.",
+                        quote: "Your smile is a small miracle that heals my heart every day."
+                    },
+                    {
+                        title: "Quiet Moment",
+                        text: "In our silence, there are thousands of unspoken words that matter. 2 months together taught me the language of love without words. Sometimes, silence with you means more.",
+                        quote: "Our silence is the most honest conversation I've ever had."
+                    },
+                    {
+                        title: "Sun and Us",
+                        text: "The sun rises and sets, but my love for you remains the same every day in these 2 months. Like the sun that always returns, my heart always returns to you.",
+                        quote: "My love for you is more consistent than the sunrise."
+                    },
+                    {
+                        title: "Blooming Together",
+                        text: "Like a blooming flower, our love grows beautifully in these 2 months. May it continue to bloom forever. From a small bud, now we're starting to show its beautiful petals.",
+                        quote: "Our love is like a newly bloomed flower - still fresh, still full of hope."
+                    },
+                    {
+                        title: "Warm Hug",
+                        text: "Rain comes and goes, but your hug remains the best place to take shelter. 2 months with you is a blessing. In your embrace, I found home.",
+                        quote: "Your hug is the best comfort after a long day."
+                    },
+                    {
+                        title: "Eternal Memory",
+                        text: "60 days, 1440 hours, 86400 minutes with you. Every second is a new page in our love story. These first 2 months will always be my favorite chapter.",
+                        quote: "60 days with you is the prologue of a lifetime story I want to write with you."
+                    }
+                ]
+            }
+        };
+
+        // Set theme default ke hitam
+        document.addEventListener('DOMContentLoaded', function() {
+            // ====== LANGUAGE FUNCTIONALITY ======
+            const langToggle = document.getElementById('langToggle');
+            const langOptions = document.getElementById('langOptions');
+            const langOptionsList = document.querySelectorAll('.lang-option');
+            
+            // Load saved language atau set ke Indonesia
+            const savedLang = localStorage.getItem('anniversaryLang') || 'id';
+            let currentLang = savedLang;
+            
+            // Update active language button
+            langOptionsList.forEach(option => {
+                if (option.getAttribute('data-lang') === savedLang) {
+                    option.classList.add('active');
+                } else {
+                    option.classList.remove('active');
+                }
+            });
+            
+            // Load translations for saved language
+            updateLanguage(currentLang);
+
+            // Toggle language options visibility
+            langToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                langOptions.style.display = langOptions.style.display === 'flex' ? 'none' : 'flex';
+            });
+
+            // Close language options when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!langToggle.contains(e.target) && !langOptions.contains(e.target)) {
+                    langOptions.style.display = 'none';
+                }
+            });
+
+            // Change language
+            langOptionsList.forEach(option => {
+                option.addEventListener('click', () => {
+                    const lang = option.getAttribute('data-lang');
+                    
+                    // Update active option
+                    langOptionsList.forEach(opt => opt.classList.remove('active'));
+                    option.classList.add('active');
+                    
+                    // Change language
+                    currentLang = lang;
+                    updateLanguage(lang);
+                    
+                    // Save to localStorage
+                    localStorage.setItem('anniversaryLang', lang);
+                    
+                    // Close options
+                    langOptions.style.display = 'none';
+                });
+            });
+
+            // Function to update all text elements
+            function updateLanguage(lang) {
+                const trans = translations[lang];
+                
+                // Update header
+                document.getElementById('mainTitle').textContent = trans.mainTitle;
+                document.getElementById('mainSubtitle').textContent = trans.mainSubtitle;
+                document.getElementById('mainDescription').innerHTML = 
+                    `<i class="fas fa-heart" style="color: var(--primary-color); margin: 0 10px;"></i>
+                    ${trans.mainDescription}
+                    <i class="fas fa-heart" style="color: var(--primary-color); margin: 0 10px;"></i>`;
+                
+                // Update dashboard
+                document.getElementById('dashboardTitle').textContent = trans.dashboardTitle;
+                document.getElementById('dashboardMessage1').textContent = trans.dashboardMessage1;
+                document.getElementById('dashboardMessage2').textContent = trans.dashboardMessage2;
+                document.getElementById('dashboardQuote').textContent = trans.dashboardQuote;
+                
+                // Update romantic messages
+                document.getElementById('romanticTitle').textContent = trans.romanticTitle;
+                document.getElementById('message1').textContent = trans.message1;
+                document.getElementById('message2').textContent = trans.message2;
+                document.getElementById('message3').textContent = trans.message3;
+                document.getElementById('message4').textContent = trans.message4;
+                
+                // Update gallery
+                document.getElementById('galleryTitle').textContent = trans.galleryTitle;
+                for (let i = 1; i <= 10; i++) {
+                    document.getElementById(`photoTitle${i}`).textContent = trans[`photoTitle${i}`];
+                }
+                
+                // Update footer
+                document.getElementById('footerTitle').textContent = trans.footerTitle;
+                document.getElementById('footerMessage1').textContent = trans.footerMessage1;
+                document.getElementById('footerMessage2').textContent = trans.footerMessage2;
+                document.getElementById('footerDate').textContent = trans.footerDate;
+                
+                // Update date format based on language
+                const anniversaryDate = new Date(2026, 1, 9);
+                let formattedDate;
+                if (lang === 'id') {
+                    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                    formattedDate = anniversaryDate.toLocaleDateString('id-ID', options);
+                } else {
+                    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                    formattedDate = anniversaryDate.toLocaleDateString('en-US', options);
+                }
+                document.getElementById('anniversaryDate').textContent = formattedDate;
+                
+                // Update photo viewer data
+                window.currentPhotoData = trans.photoData;
+            }
+
+            // ====== THEME FUNCTIONALITY ======
+            const themeToggle = document.getElementById('themeToggle');
+            const themeOptions = document.getElementById('themeOptions');
+            const themeOptionsList = document.querySelectorAll('.theme-option');
+            const body = document.body;
+
+            // Load saved theme atau set ke black
+            const savedTheme = localStorage.getItem('anniversaryTheme') || 'black';
+            body.className = `theme-${savedTheme}`;
+            
+            // Update active theme button
+            themeOptionsList.forEach(option => {
+                if (option.getAttribute('data-theme') === savedTheme) {
+                    option.classList.add('active');
+                } else {
+                    option.classList.remove('active');
+                }
+            });
+
+            // Toggle theme options visibility
+            themeToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                themeOptions.style.display = themeOptions.style.display === 'flex' ? 'none' : 'flex';
+            });
+
+            // Close theme options when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!themeToggle.contains(e.target) && !themeOptions.contains(e.target)) {
+                    themeOptions.style.display = 'none';
+                }
+            });
+
+            // Change theme
+            themeOptionsList.forEach(option => {
+                option.addEventListener('click', () => {
+                    const theme = option.getAttribute('data-theme');
+                    
+                    // Update active option
+                    themeOptionsList.forEach(opt => opt.classList.remove('active'));
+                    option.classList.add('active');
+                    
+                    // Change theme
+                    body.className = '';
+                    body.classList.add(`theme-${theme}`);
+                    
+                    // Save to localStorage
+                    localStorage.setItem('anniversaryTheme', theme);
+                    
+                    // Close options
+                    themeOptions.style.display = 'none';
+                });
+            });
+
+            // ====== ANIMATIONS ======
+            // Fade in animation on scroll
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(el => {
+                observer.observe(el);
+            });
+
+            // ====== PHOTO VIEWER FUNCTIONALITY ======
+            const photoViewer = document.getElementById('photoViewer');
+            const closeViewer = document.getElementById('closeViewer');
+            const viewerImg = document.getElementById('viewerImg');
+            const viewerTitle = document.getElementById('viewerTitle');
+            const viewerText = document.getElementById('viewerText');
+            const viewerQuote = document.getElementById('viewerQuote');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            // Open photo viewer when clicking on gallery item
+            galleryItems.forEach((item, index) => {
+                item.addEventListener('click', () => {
+                    const imgSrc = item.querySelector('.gallery-img').src;
+                    const photoIndex = parseInt(item.getAttribute('data-index')) - 1;
+                    const data = translations[currentLang].photoData[photoIndex];
+                    
+                    // Update viewer content
+                    viewerImg.src = imgSrc;
+                    viewerImg.alt = data.title;
+                    viewerTitle.textContent = data.title;
+                    viewerText.textContent = data.text;
+                    viewerQuote.textContent = `"${data.quote}"`;
+                    
+                    // Show viewer
+                    photoViewer.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+            
+            // Close photo viewer
+            closeViewer.addEventListener('click', () => {
+                photoViewer.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+            
+            // Close viewer when clicking outside
+            photoViewer.addEventListener('click', (e) => {
+                if (e.target === photoViewer) {
+                    photoViewer.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Close viewer with Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && photoViewer.classList.contains('active')) {
+                    photoViewer.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // ====== CONFETTI EFFECT ======
+            // Add confetti effect when opening the page
+            setTimeout(() => {
+                createConfetti();
+            }, 1000);
+
+            function createConfetti() {
+                const colors = ['#ff4757', '#ff6b81', '#4d8af0', '#9c88ff', '#4cd137', '#ff9f1a'];
+                
+                for (let i = 0; i < 100; i++) {
+                    setTimeout(() => {
+                        const confetti = document.createElement('div');
+                        confetti.innerHTML = '❤️';
+                        confetti.style.position = 'fixed';
+                        confetti.style.fontSize = Math.random() * 20 + 15 + 'px';
+                        confetti.style.left = Math.random() * 100 + 'vw';
+                        confetti.style.top = '-50px';
+                        confetti.style.opacity = '0.8';
+                        confetti.style.zIndex = '9999';
+                        confetti.style.pointerEvents = 'none';
+                        confetti.style.color = colors[Math.floor(Math.random() * colors.length)];
+                        confetti.style.animation = `fall ${Math.random() * 3 + 2}s linear forwards`;
+                        
+                        // Add animation style if not exists
+                        if (!document.querySelector('#confetti-animation')) {
+                            const style = document.createElement('style');
+                            style.id = 'confetti-animation';
+                            style.textContent = `
+                                @keyframes fall {
+                                    0% {
+                                        transform: translateY(0) rotate(0deg);
+                                        opacity: 1;
+                                    }
+                                    100% {
+                                        transform: translateY(100vh) rotate(720deg);
+                                        opacity: 0;
+                                    }
+                                }
+                            `;
+                            document.head.appendChild(style);
+                        }
+                        
+                        document.body.appendChild(confetti);
+                        
+                        // Remove confetti after animation
+                        setTimeout(() => {
+                            if (confetti.parentNode) {
+                                confetti.remove();
+                            }
+                        }, 5000);
+                    }, i * 30);
+                }
+            }
+
+            // ====== HEARTBEAT ANIMATION ======
+            // Heartbeat animation for love elements
+            const heartElements = document.querySelectorAll('.heartbeat');
+            setInterval(() => {
+                heartElements.forEach(heart => {
+                    heart.style.animation = 'none';
+                    setTimeout(() => {
+                        heart.style.animation = 'heartbeat 1.5s infinite';
+                    }, 10);
+                });
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
